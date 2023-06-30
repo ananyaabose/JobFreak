@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="android-chrome-192x192.png">
+<title>Job Freak</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+<img src="android-chrome-192x192.png" class="">    </div>
+  </div>
+  <div class="tab">
+    <button class="tablinks" onclick="openDetail(event, 'Home')" id="defaultOpen">Home</button>
+    <button class="tablinks" onclick="openDetail(event, 'Contact')">Contact</button>
+    <button class="tablinks" onclick="openDetail(event, 'Information')">Information</button>
+    <button class="tablinks" onclick="openDetail(event, 'Guide')">Guide</button>
+</div>
+
+  <div id="Home" class="tabcontent">
+    <h3>Home</h3>
+    <p>Get Updates for Jobs and Internships openings from different companies on our website</p>
+  </div>
+  
+  <div id="Contact" class="tabcontent">
+    <h3>Contact</h3>
+    <p>You may contact us at our email regarding any queries or trouble.</p>
+  </div>
+  
+  <div id="Information" class="tabcontent">
+    <h3>Information</h3>
+    <p>At Job Freak we post daily updates on internships and jobs postings ! ! Our aim is to empower the youth of our country and make them Self-dependent. By providing them job/internships all kinds of opportunities from various sectors, sharing knowledge and make them competent enough so that they could excel in any field.</p>
+  </div>
+
+  <div id="Guide" class="tabcontent">
+    <h3>Guide</h3>
+    <p>All Company names and brands are the Intellectual Property of their respective owners. All company , product , and service names used in this website are for identification purposes only. We are not associated with any company/organization whose jobs posted on jobfreak.in , We are just an information provider for jobs and internships</p>
+  </div>        
+
+<script>
+  function openDetail(evt, detail) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(detail).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
+</body>
+</html> 
